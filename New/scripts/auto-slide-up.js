@@ -41,6 +41,8 @@
   addActive(funliTags);
   let worksDiv = document.querySelectorAll('#portfoliosAll div.portfolios');
   addActive(worksDiv);
+  let cssPortfolios = document.querySelectorAll('#portfoliosCSS > div');
+  addActive(cssPortfolios);
   function addActive(arr) {
     for (let i = 0; i < arr.length; i++) {
       arr[i].onmouseenter = function (x) {

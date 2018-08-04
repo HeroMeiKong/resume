@@ -1,6 +1,6 @@
 body{ background: #EFEFEF; margin: 0; }
 a{ color: inherit; text-decoration: none; }
-* { margin: 0; padding: 0; box-sizing: border-box;}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 hr { height: 0; border: none; border-top: 1px solid #DEDEDE; }
 ul,ol { list-style: none; }
 h1,h2,h3,h4,h5,h6 { font-weight: normal; }
@@ -253,8 +253,11 @@ section.portfolio {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-top: 100px;
   text-align: center;
+}
+#portfolio{
+  height: 578px;
 }
 section.skills > h2,
 section.message > h2,
@@ -396,7 +399,56 @@ section.portfolio > nav .selectBar.state3 .selectBar-inner  {
 
 /*---------------portfoliosFrame---------------*/
 
-
+#portfoliosFrame{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+#portfoliosFrame .portfoliosFrame{
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 84px;
+  margin: 30px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  animation: breath 0.75s infinite alternate-reverse;
+}
+#portfoliosFrame .portfoliosFrame p{
+  color: #6E8D9F;
+}
+#portfoliosFrame .portfoliosFrame h6{
+  margin-top: 5px;
+  color: rgb(143, 148, 142);
+}
+#portfoliosFrame .porleft{
+  width: 70%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 20px 0 0 15px;
+  text-align: left;
+}
+#portfoliosFrame .porright{
+  width: 30%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+#portfoliosFrame > .portfoliosFrame:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+@keyframes breath{
+  0%{
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  }
+  100%{
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+  }
+}
 
 /*---------------portfoliosCSS---------------*/
 
@@ -408,23 +460,126 @@ section.portfolio > nav .selectBar.state3 .selectBar-inner  {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  align-items: center;
 }
 #portfoliosCSS .portfoliosCSS{
-  border: 1px solid black;
-  width: 470px;
+  width: 448px;
   height: 456px;
-  background: red;
+}
+#portfoliosCSS .portfoliosCSSBoth{
+  transition: box-shadow 1s;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+#portfoliosCSS > div.portfoliosCSSBoth.active{
+  transition: box-shadow 1s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+}
+#portfoliosCSS .portfoliosCSS1{
+  left: 0;
+  position: relative;
+}
+#portfoliosCSS .portfoliosCSS2{
+  left: 3%;
+  position: relative;
+}
+#portfoliosCSS .CSS-image{
+  height: 290px;
+  overflow: hidden;
+}
+#portfoliosCSS .portfoliosCSSBoth .CSS-image  img {
+  transition: all 1s;
+}
+#portfoliosCSS > div.active .CSS-image  img {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#portfoliosCSS > div.active .CSS-image img:hover{
+  transform: scale(1.1);
+}
+#portfoliosCSS .CSS-datetime{ 
+  background: #e8676b;
+  height: 50px;
+  width: 50px;
+  line-height: 1;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding-top: 6px;
+  display: block;
+}
+#portfoliosCSS .CSS-date-day{
+  font-size: 20px;
+}
+#portfoliosCSS .CSS-date-mouth{
+  font-size: 13px;
+}
+#portfoliosCSS .portfoliosCSSBoth .CSS-tag{
+  margin-top: 10px;
+}
+#portfoliosCSS .portfoliosCSSBoth .CSS-title{
+  margin-top: 20px;
+  color: #373b42;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#portfoliosCSS .portfoliosCSSBoth .CSS-info{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #757575;
+  font-size: 13px;
+}
+#portfoliosCSS .portfoliosCSSBoth .CSS-info a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+#portfoliosCSS .portfoliosCSSBoth .CSS-date .CSS-tag a{
+  color: #7D7D7D;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 3px;
+}
+#portfoliosCSS .portfoliosCSSBoth .CSS-date .CSS-tag a:hover{
+  text-decoration: underline;
+}
+#portfoliosCSS .portfoliosCSSBoth .CSS-date .CSS-title a:hover{
+  cursor: pointer;
+  color: #e8676b;
 }
 #portfoliosCSS .portfoliosBlog{
-  
-  border: 1px solid black;
+  text-align: center;
   width: 100%;
-  height: 131px;
-  background: yellow;
+  height: 141px;
+  padding: 60px;
+}
+#portfoliosCSS .portfoliosBlog a{
+  font-weight: 700;
+  background: #E0E0E0;
+  color: #3D4451;
+  line-height: 1.1;
+  cursor: pointer;
+  padding: 21px 55px;
+  letter-spacing: 0.05em;
+  margin: 5px;
+  transition: box-shadow 1s;
+}
+#portfoliosCSS .portfoliosBlog a:hover{
+  transition: box-shadow 1s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
 }
 
 /*---------------section.message---------------*/
 
+section.message{
+  margin-top: 30px;
+}
 section.message > ol { max-width: 700px; margin: 0 auto; border-top: 1px solid #ddd; }
 section.message > ol > li {padding: 16px; border-bottom: 1px solid #ddd; }
 section.message > form { width: 700px; margin: 50px auto; }

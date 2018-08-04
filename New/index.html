@@ -194,16 +194,25 @@
     <script>
       portfolio1.onclick = function(){
         portfolioBar.className = 'selectBar state1'
+        document.querySelector("#portfoliosAll").setAttribute("style","display: flex;");
+        document.querySelector("#portfoliosFrame").setAttribute("style","display: none;");
+        document.querySelector("#portfoliosCSS").setAttribute("style","display: none;");
       }
       portfolio2.onclick = function(){
         portfolioBar.className = 'selectBar state2'
+        document.querySelector("#portfoliosFrame").setAttribute("style","display: flex;");
+        document.querySelector("#portfoliosAll").setAttribute("style","display: none;");
+        document.querySelector("#portfoliosCSS").setAttribute("style","display: none;");
       }
       portfolio3.onclick = function(){
         portfolioBar.className = 'selectBar state3'
+        document.querySelector("#portfoliosCSS").setAttribute("style","display: flex;");
+        document.querySelector("#portfoliosAll").setAttribute("style","display: none;");
+        document.querySelector("#portfoliosFrame").setAttribute("style","display: none;");
       }
     </script>
     <div id="portfolio">
-      <div id="portfoliosAll" style="z-index: 1;">
+      <div id="portfoliosAll">
         <div class="bigOne portfolios"><img src="./images/works1.jpg" alt="Work1"></div>
         <div class="middleOne"></div>
         <div class="smallOne">
@@ -211,9 +220,118 @@
           <div  class="portfolios"><img src="./images/works3.jpg" alt="Work3"></div>
         </div>
       </div>
-      <div id="portfoliosFrame" class="portfolios"></div>
-      <div id="portfoliosCSS" class="portfolios" style="z-index: 2;">
-        <div class="portfoliosCSS">
+      <div id="portfoliosFrame" style="display: none;">
+        <div class="portfoliosFrame">
+          <div class="porleft">
+            <p>Vue.js在线简历编辑器</p>
+            <h6>关键字：Vue、Canvas</h6>
+          </div>
+          <div class="porright">
+            <img src="./images/frame1.png" alt="Frame1">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+          <div class="porleft">
+              <p>jQuery仿网易云</p>
+              <h6>关键字：jQuery、原生JS</h6>
+          </div>
+          <div class="porright">
+              <img src="./images/frame2.png" alt="Frame2">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+          <div class="porleft">
+            <p>仿QQ音乐</p>
+            <h6>关键字：原生JS、Webpack</h6>
+          </div>
+          <div class="porright">
+            <img src="./images/frame3.png" alt="Frame3">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+          <div class="porleft">
+            <p>共享博客</p>
+            <h6>关键字：Vue.JS、Webpack</h6>
+          </div>
+          <div class="porright">
+            <img src="./images/frame4.png" alt="Frame3">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+          <div class="porleft">
+            <p>重构有赞商城</p>
+            <h6>关键字：Vue.JS、Webpack</h6>
+          </div>
+          <div class="porright">
+            <img src="./images/frame5.png" alt="Frame3">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+          <div class="porleft">
+            <p>Vue.js技术栈</p>
+            <h6>关键字：Vue、Webpack</h6>
+          </div>
+          <div class="porright">
+            <img src="./images/frame6.png" alt="Frame3">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+          <div class="porleft">
+            <p>Node.js在线备忘录</p>
+            <h6>关键字：Node.js、Express</h6>
+          </div>
+          <div class="porright">
+            <img src="./images/frame7.png" alt="Frame3">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+          <div class="porleft">
+            <p>React之Todo-List</p>
+            <h6>关键字：React.js、Webpack</h6>
+          </div>
+          <div class="porright">
+            <img src="./images/frame8.png" alt="Frame3">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+          <div class="porleft">
+            <p>Canvas画板</p>
+            <h6>关键字：原生JS</h6>
+          </div>
+          <div class="porright">
+            <img src="./images/frame9.png" alt="Frame3">
+          </div>
+        </div>
+        <div class="portfoliosFrame">
+            <div class="porleft">
+              <p>待完成项目1</p>
+              <h6>关键字：Node.js、Express</h6>
+            </div>
+            <div class="porright">
+              <img src="./images/frame.png" alt="Frame3">
+            </div>
+          </div>
+          <div class="portfoliosFrame">
+            <div class="porleft">
+              <p>待完成项目2</p>
+              <h6>关键字：React.js、Webpack</h6>
+            </div>
+            <div class="porright">
+              <img src="./images/frame.png" alt="Frame3">
+            </div>
+          </div>
+          <div class="portfoliosFrame">
+            <div class="porleft">
+              <p>待完成项目3</p>
+              <h6>关键字：原生JS</h6>
+            </div>
+            <div class="porright">
+              <img src="./images/frame.png" alt="Frame3">
+            </div>
+          </div>
+        </div>
+      <div id="portfoliosCSS" style="display: none;">
+        <div class="portfoliosCSS1 portfoliosCSSBoth">
           <article>
             <div class="CSS-media">
               <div class="CSS-image">
@@ -222,24 +340,60 @@
                 </a>
               </div>
             </div>
-            <div class="CSS-data">
-              <time class="CSS-datatime">
-                <span class="CSS-data-day"></span>
-                <span class="CSS-data-mouth"></span>
+            <div class="CSS-date">
+              <time class="CSS-datetime">
+                <span class="CSS-date-day">04</span>
+                <span class="CSS-date-mouth">Feb</span>
               </time>
-              <div class="CSS-tag"></div>
-              <h3 class="CSS-title"></h3>
-              <div class="CSS-introduce"></div>
-              <div class="CSS-info"></div>
+              <div class="CSS-tag">
+                <a href="#">#CSS</a>
+                <a href="#">#Pikachu</a>
+                <a href="#">#原生JS</a>
+              </div>
+              <h3 class="CSS-title">
+                <a href="#">Pikachu</a>
+              </h3>
+              <div class="CSS-info">
+                <a href="#">by HeroMeiKong</a>
+              </div>
             </div>
           </article>
         </div>
-        <div class="portfoliosCSS"></div>
-        <div class="portfoliosBlog"></div>
+        <div class="portfoliosCSS2 portfoliosCSSBoth">
+            <article>
+                <div class="CSS-media">
+                  <div class="CSS-image">
+                    <a href="#">
+                      <img src="./images/css2.jpg" alt="CSS2">
+                    </a>
+                  </div>
+                </div>
+                <div class="CSS-date">
+                  <time class="CSS-datetime">
+                    <span class="CSS-date-day">11</span>
+                    <span class="CSS-date-mouth">Feb</span>
+                  </time>
+                  <div class="CSS-tag">
+                      <a href="#">#CSS</a>
+                      <a href="#">#Baymax</a>
+                      <a href="#">#原生JS</a>
+                  </div>
+                  <h3 class="CSS-title">
+                    <a href="#">Baymax</a>
+                  </h3>
+                  <div class="CSS-info">
+                    <a href="#">by HeroMeiKong</a>
+                  </div>
+                </div>
+              </article>
+        </div>
+        <div class="portfoliosBlog">
+          <a href="#">VISIT MY GITHUB</a>
+        </div>
       </div>
     </div>
   </section>
-  <!--<section data-x class="message">
+  <section data-x class="message">
     <h2>留言</h2>
     <ol id="messageList"></ol>
     <form id="postMessageForm">
@@ -249,7 +403,7 @@
       <input type="text" name="content">
       <input type="submit" value="提交">
     </form>
-  </section>-->
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.3/dist/av-min.js"></script>
   <!--模块化-->
