@@ -363,6 +363,35 @@ section.portfolio > nav .selectBar.state3 .selectBar-inner  {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
   height: 587px;
 }
+#portfoliosAll .portfolios > img{filter: blur(3px) brightness(0.7);}
+#tools{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#tools .tools{
+  width: 50px;
+  height: 50px;;
+  border: 1px solid black;
+  margin: 0 10px;
+  transition: all 1s;
+}
+#tools h2{
+  position: absolute;
+  margin-top: -200px;
+  margin-left: 20px;
+  color: #FFFFFF;
+}
+#tools p{
+  position: absolute;
+  margin-top: -150px;
+  margin-left: 20px;
+  color: #9A9DA2;
+}
+#tools div.active{
+  transform: translateY(-100px);
+  transition: all 1s;
+}
 #portfoliosAll .middleOne{ width: 5%; }
 #portfoliosAll .smallOne{
   right: 0;
@@ -393,7 +422,7 @@ section.portfolio > nav .selectBar.state3 .selectBar-inner  {
   cursor: pointer;
   transition: all 1s;
 }
-#portfoliosAll .portfolios img:hover {
+#portfoliosAll .portfolios > img:hover {
   transform: scale(1.1);
 }
 

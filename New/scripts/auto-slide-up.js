@@ -40,9 +40,11 @@
   let funliTags = document.querySelectorAll('nav.menu > ul > li > ul > li');
   addActive(funliTags);
   let worksDiv = document.querySelectorAll('#portfoliosAll div.portfolios');
-  addActive(worksDiv);
-  let cssPortfolios = document.querySelectorAll('#portfoliosCSS > div');
+  addActiveAll(worksDiv);
+  let cssPortfolios = document.querySelectorAll('#portfoliosCSS >  div');
   addActive(cssPortfolios);
+
+  
   function addActive(arr) {
     for (let i = 0; i < arr.length; i++) {
       arr[i].onmouseenter = function (x) {
@@ -50,6 +52,26 @@
       }
       arr[i].onmouseleave = function (x) {
         x.currentTarget.classList.remove('active');
+      }
+    }
+  }
+  function addActiveAll(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].onmouseenter = function (x) {
+        x.currentTarget.classList.add('active');
+        let length = x.currentTarget.children[1].children.length;
+        let childrens = x.currentTarget.children[1].children;
+        for( let j = 0 ;j < length;j++){
+          childrens[j].classList.add('active');
+        }
+      }
+      arr[i].onmouseleave = function (x) {
+        x.currentTarget.classList.remove('active');
+        let length = x.currentTarget.children[1].children.length;
+        let childrens = x.currentTarget.children[1].children;
+        for( let j = 0 ;j < length;j++){
+          childrens[j].classList.remove('active');
+        }
       }
     }
   }
