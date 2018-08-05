@@ -43,6 +43,10 @@
   addActiveAll(worksDiv);
   let cssPortfolios = document.querySelectorAll('#portfoliosCSS >  div');
   addActive(cssPortfolios);
+  let btn = document.querySelectorAll('#siteWorks .more .btn');
+  addActive(btn);
+  let blogImgs = document.querySelectorAll('#myBlog .Blogs .myBlog');
+  addActive(blogImgs);
 
   
   function addActive(arr) {

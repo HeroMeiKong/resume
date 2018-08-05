@@ -246,10 +246,15 @@ body > main .downloadResume-wrappar { text-align: center; }
   font-family: Open Sans;
 }
 
-/*---------------section.skills---------------*/
+/*---------------#siteSkills---------------*/
 
-section.skills,
-section.portfolio {
+#siteSkills,
+#siteWorks,
+#siteBlog,
+#siteEduExperience,
+#siteContact,
+#siteOther,
+#siteMessageBoard {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
@@ -257,34 +262,34 @@ section.portfolio {
   text-align: center;
 }
 #portfolio{
-  height: 578px;
+  height: 600px;
 }
-section.skills > h2,
-section.message > h2,
-section.portfolio > h2 {
+#siteSkills > h2,
+section.siteMessageBoard > h2,
+#siteWorks > h2 {
   text-align: center;
   color: #3D4451;
   font-size: 34px;
   line-height: 1.2;
   font-weight: 600;
 }
-section.skills h3 { font-size: 14px; line-height: 1.1; padding-right: 40px; }
-section.skills > ol {
+#siteSkills h3 { font-size: 14px; line-height: 1.1; padding-right: 40px; }
+#siteSkills > ol {
   background: white;
   box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
   padding: 42px 50px 10px;
   margin-top: 30px;
 }
-section.skills > ol > li { float: left; width: 48%; box-sizing: border-box; }
-section.skills > ol > li:nth-child(even) { float: right; }
-section.skills .progressBar {
+#siteSkills > ol > li { float: left; width: 48%; box-sizing: border-box; }
+#siteSkills > ol > li:nth-child(even) { float: right; }
+#siteSkills .progressBar {
   height: 5px;
   background: #FAE1E1;
   border-radius: 2px;
   margin: 4px 0px 40px;
   overflow: hidden;
 }
-section.skills .progressBar > .progress {
+#siteSkills .progressBar > .progress {
   height: 100%;
   background: #E6686A;
   width: 70%;
@@ -292,52 +297,52 @@ section.skills .progressBar > .progress {
   transform: translateX(0);
   transition: all 1s;
 }
-section.skills.offset .progress{ transform: translateX(-100%); }
+#siteSkills.offset .progress{ transform: translateX(-100%); }
 
-/*---------------section.portfolio---------------*/
+/*---------------#siteWorks---------------*/
 
-section.portfolio > nav {
+#siteWorks > nav {
   text-align: center;
   display: inline-block;
   vertical-align: top;
   margin-top: 32px;
   margin-bottom: 28px;
 }
-section.portfolio > nav > ol {
+#siteWorks > nav > ol {
   margin: 0 auto;
   display: inline-block;
   vertical-align: top;
 }
-section.portfolio > nav > ol > li{
+#siteWorks > nav > ol > li{
   float: left;
   margin-left: 40px;
   cursor: pointer;
 }
-section.portfolio > nav > ol > li:first-child{
+#siteWorks > nav > ol > li:first-child{
   margin-left: 0px;
 }
-section.portfolio > nav .selectBar {
+#siteWorks > nav .selectBar {
   height: 5px;
   background: white;
   margin-top: 5px;
   border-radius: 2px;
 }
-section.portfolio > nav .selectBar-inner {
+#siteWorks > nav .selectBar-inner {
   height: 100%;
   background: #E6686A;
   width: 10%;
   border-radius: 2px;
   transition: all 0.4s;
 }
-section.portfolio > nav .selectBar.state1 .selectBar-inner  {
+#siteWorks > nav .selectBar.state1 .selectBar-inner  {
   margin-left: 0;
   width: 35px;
 }
-section.portfolio > nav .selectBar.state2 .selectBar-inner  {
+#siteWorks > nav .selectBar.state2 .selectBar-inner  {
   margin-left: 70px;
   width: 96px;
 }
-section.portfolio > nav .selectBar.state3 .selectBar-inner  {
+#siteWorks > nav .selectBar.state3 .selectBar-inner  {
   margin-left: 205px;
   width: 30px;
 }
@@ -363,35 +368,43 @@ section.portfolio > nav .selectBar.state3 .selectBar-inner  {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
   height: 587px;
 }
-#portfoliosAll .portfolios > img{filter: blur(3px) brightness(0.7);}
+#portfoliosAll .portfolios > img{filter: blur(1px) brightness(0.6);}
 #tools{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin-left: 30px;
 }
 #tools .tools{
   width: 50px;
   height: 50px;;
-  border: 1px solid black;
+  border: 1px solid rgb(182, 213, 241);
+  border-radius: 5px;
   margin: 0 10px;
   transition: all 1s;
 }
-#tools h2{
+#tools h1{
   position: absolute;
-  margin-top: -200px;
-  margin-left: 20px;
+  margin-top: -100px;
   color: #FFFFFF;
+  transition: all 1s;
 }
 #tools p{
   position: absolute;
-  margin-top: -150px;
-  margin-left: 20px;
-  color: #9A9DA2;
-}
-#tools div.active{
-  transform: translateY(-100px);
+  margin-top: -50px;
+  color: rgb(182, 213, 241);
   transition: all 1s;
 }
+#tools div.active,p.active,h1.active{
+  transform: translateY(-80px);
+  transition: all 1s;
+}
+#tools .tool2.active{ transition-delay: 0.1s; }
+#tools .tool3.active{ transition-delay: 0.2s; }
+
+
+
+
 #portfoliosAll .middleOne{ width: 5%; }
 #portfoliosAll .smallOne{
   right: 0;
@@ -426,13 +439,53 @@ section.portfolio > nav .selectBar.state3 .selectBar-inner  {
   transform: scale(1.1);
 }
 
+#smalltools1,
+#smalltools2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+}
+#smalltools1 .smalltools,
+#smalltools2 .smalltools{
+  width: 30px;
+  height: 30px;;
+  border: 1px solid rgb(182, 213, 241);
+  border-radius: 3px;
+  margin: -20px 0 0 10px;
+  transition: all 1s;
+}
+#smalltools1 h5,
+#smalltools2 h5{
+  position: absolute;
+  margin-top: -80px;
+  color: #FFFFFF;
+  transition: all 1s;
+}
+#smalltools1 h6,
+#smalltools2 h6{
+  position: absolute;
+  margin-top: -55px;
+  color: rgb(182, 213, 241);
+  transition: all 1s;
+}
+#smalltools1 div.active,h5.active,h6.active,
+#smalltools2 div.active,h5.active,h6.active{
+  transform: translateY(-50px);
+  transition: all 1s;
+}
+#smalltools1 .tool5.active,
+#smalltools2 .tool5.active{ transition-delay: 0.1s; }
+#smalltools1 .tool6.active,
+#smalltools2 .tool6.active{ transition-delay: 0.2s; }
+
 /*---------------portfoliosFrame---------------*/
 
 #portfoliosFrame{
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
-  justify-content: space-around;
+  justify-content: space-between; 
 }
 #portfoliosFrame .portfoliosFrame{
   width: 30%;
@@ -604,11 +657,184 @@ section.portfolio > nav .selectBar.state3 .selectBar-inner  {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
 }
 
-/*---------------section.message---------------*/
 
-section.message{
-  margin-top: 30px;
+#siteWorks .more{
+  display: flex;
+  justify-content: center;
 }
-section.message > ol { max-width: 700px; margin: 0 auto; border-top: 1px solid #ddd; }
-section.message > ol > li {padding: 16px; border-bottom: 1px solid #ddd; }
-section.message > form { width: 700px; margin: 50px auto; }
+#siteWorks .more .btn{
+  margin: 30px 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  transition: box-shadow 0.3s;
+  border: 1px solid #CDCFD1;
+  background-color: #EFEFEF;
+  border-radius:5px;
+  transition: all 0.3s;
+  outline: none;
+}
+#siteWorks .more .imgs{
+  width: 30px;
+  height: 30px;
+  color: #3D4451;
+  font-weight: bold;
+  transition: all 0.3s;
+  background-image: url('/images/icons/more.png');
+}
+#siteWorks .more .btn.active {
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#siteWorks .more .btn.active .imgs {
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+
+/*---------------section.siteBlog---------------*/
+
+#myBlog .Blogs{
+  display: flex;
+  justify-content: space-between; 
+  padding-top: 50px; 
+}
+#myBlog .Blogs .myBlog{
+  width: 30%;
+  transition: all 0.3s;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+#myBlog .Blogs .myBlog:hover{
+  transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+}
+#myBlog .Blogs .myBlog .myBlogImg{
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+#myBlog .Blogs .myBlog.active .myBlogImg{
+  filter: brightness(0.8);
+}
+#myBlog .Blogs .myBlog .jianshu{ background-image: url('/images/blog/jianshu.jpg'); }
+#myBlog .Blogs .myBlog .hexo{ background-image: url('/images/blog/hexo.jpg'); }
+#myBlog .Blogs .myBlog .github{ background-image: url('/images/blog/github.jpg'); }
+#myBlog .Blogs .myBlog .myBlogImg .blogLink{
+  transform: scale(0);
+  transition: all 0.3s;
+}
+#myBlog .Blogs .myBlog.active .myBlogImg .blogLink{
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 5px;
+  color: #ffffff;
+  filter: brightness(1.5);
+  transform: scale(1);
+}
+#myBlog .Blogs .myBlog .myBlogImg .blogLink:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+}
+#myBlog .Blogs .myBlog .myBlogInfo{
+  height: 74px;
+}
+#myBlog .Blogs .myBlog .myBlogInfo h3{ padding: 10px 0;}
+#myBlog .Blogs .myBlog .myBlogInfo p{ color: #9A9DA2; }
+
+/*---------------section.siteEduExprience---------------*/
+
+#siteEduExperience{
+  display: flex;
+  justify-content: center;
+}
+#siteEduExperience .timeline{
+  display: flex;
+  justify-content: space-between; 
+}
+#siteEduExperience .timeline-bar{
+  top: 122px;
+  height: 600px;
+  background-color: #e8676b;
+  content: '';
+  width: 4px;
+  opacity: 0.2;
+  margin-left: -2px;
+  position: absolute;
+  left: 50%;
+}
+#siteEduExperience .timeliner-inner{
+
+}
+#siteEduExperience .timeliner-inner .timeliner-box{
+  top: 50px;
+  width: 46%;
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+#siteEduExperience .timeliner-inner .timeliner-box-left{
+  float: left;
+  clear: left;
+}
+#siteEduExperience .timeliner-inner .timeliner-box-right{
+  float: right;
+  clear: right;
+}
+#siteEduExperience .timeliner-box-position1 {
+  position: absolute;
+  left: 0px;
+  right: auto;
+  top: 0px;
+}
+#siteEduExperience .timeline-box-inner{
+  border-width: 5px 0 0 0;
+  border-style: solid;
+  border-color: #e8676b;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+#siteEduExperience .arrow{
+  top: 53px;
+  left: 433px;
+  width: 12px;
+  height: 41px;
+  display: flex;
+  position: absolute;
+  background-image: url(/images/arrows.png);
+  background-repeat: no-repeat;
+  background-position: -18px 0;
+}
+#siteEduExperience .timeline-head{
+  width: 100%;
+  padding-top: 10px;
+}
+#siteEduExperience .timedate{
+  color: #e8676b;
+   font-weight: 700;
+}
+#siteEduExperience h5{
+  padding-top: 5px;
+}
+#siteEduExperience p{
+  font-size: 16px;
+  padding: 20px 10px;
+  text-align: justify;
+}
+
+/*---------------section.siteContact---------------*/
+
+/*---------------section.siteMessageBoard---------------*/
+
+section.siteMessageBoard{
+  margin-top: 50px;
+}
+section.siteMessageBoard > ol { max-width: 700px; margin: 0 auto; border-top: 1px solid #ddd; }
+section.siteMessageBoard > ol > li {padding: 16px; border-bottom: 1px solid #ddd; }
+section.siteMessageBoard > form { width: 700px; margin: 50px auto; }
