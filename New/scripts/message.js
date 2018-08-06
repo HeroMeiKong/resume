@@ -7,6 +7,10 @@
     },
     fetch: function(){ 
       var query = new AV.Query('Message');
+      var now = new Date();
+      query.lessThanOrEqualTo('createdAt', now); //查询今天之前创建的 Todo
+      query.limit(6);
+      query.descending('createdAt');
       return query.find() // Promise 对象
     },
     // 创建数据
@@ -30,7 +34,6 @@
     init: function(view, model){
       this.view = view
       this.model = model
-
       this.messageList = view.querySelector('#messageList')
       this.form = view.querySelector('form')
       this.model.init()
@@ -63,9 +66,14 @@
         let li = document.createElement('li')
         li.innerText = `${object.attributes.name}: ${object.attributes.content}`
         let messageList = document.querySelector('#messageList')
-        messageList.appendChild(li)
+        messageList.childNodes[0].insertBefore(li)
+        length = messageList.childNodes.length
+        for(let i=1;i<length-1;i++){
+          messageList.childNodes[i] = messageList.childNodes[i+1]
+        }
+        messageList.childNodes[length-1].removeChild(li);
+        //messageList.appendChild(li)
         myForm.querySelector('input[name=content]').value = ''
-        console.log(object)
       })
     }
 

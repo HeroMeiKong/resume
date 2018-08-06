@@ -613,17 +613,31 @@
     </div>
   </section>
   <section data-x id="siteMessageBoard">
-    <h2>留言</h2>
-    <ol id="messageList"></ol>
-    <form id="postMessageForm">
-      <label for="">姓名</label>
-      <input type="text" name="name">
-      <label for="">内容</label>
-      <input type="text" name="content">
-      <input type="submit" value="提交">
-    </form>
+    <h2>留言版</h2>
+    <div class="MessageBoard">
+      <div class="MessageBoard-box">
+        <label for="">最近留言记录</label>
+        <ol id="messageList"></ol>
+      </div>
+      <div class="postMessageForm">
+        <label for="">留言</label>
+        <form id="postMessageForm">
+          <div id="name">
+            <label for="">姓名</label>
+            <input type="text" name="name">
+          </div>
+          <div id="content">
+            <label for="">内容</label>
+            <input type="text" name="content">
+          </div>
+          <input type="submit" value="提交" id="subbtn">
+        </form>
+      </div>
+    </div>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+  <footer>
+    <div>sssssssss</div>
+  </footer>
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.3/dist/av-min.js"></script>
   <!--模块化-->
   <script src="./scripts/auto-slide-up.js"></script>
