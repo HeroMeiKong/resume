@@ -47,6 +47,20 @@
   addActive(btn);
   let blogImgs = document.querySelectorAll('#myBlog .Blogs .myBlog');
   addActive(blogImgs);
+  
+  let others = document.querySelectorAll('#siteOther .other-box li');
+  for (let i = 0; i < others.length; i++) {
+    others[i].onclick = function(x){
+      console.log(x.currentTarget.classList)
+      if(x.currentTarget.classList.value === ''){
+        x.currentTarget.classList.add('active');
+        console.log(1)
+      }else{
+        x.currentTarget.classList.remove('active');
+        console.log(2)
+      }
+    }
+  }
 
   
   function addActive(arr) {

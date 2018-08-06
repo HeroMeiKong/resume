@@ -251,7 +251,7 @@ body > main .downloadResume-wrappar { text-align: center; }
 #siteSkills,
 #siteWorks,
 #siteBlog,
-#siteEduExperience,
+#siteWorkExperience,
 #siteContact,
 #siteOther,
 #siteMessageBoard {
@@ -750,17 +750,18 @@ section.siteMessageBoard > h2,
 
 /*---------------section.siteEduExprience---------------*/
 
-#siteEduExperience{
+#siteWorkExperience{
   display: flex;
   justify-content: center;
 }
-#siteEduExperience .timeline{
+#siteWorkExperience .timeline{
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
+  height: 470px;
 }
-#siteEduExperience .timeline-bar{
+#siteWorkExperience .timeline-bar{
   top: 122px;
-  height: 600px;
+  height: 220px;
   background-color: #e8676b;
   content: '';
   width: 4px;
@@ -769,38 +770,62 @@ section.siteMessageBoard > h2,
   position: absolute;
   left: 50%;
 }
-#siteEduExperience .timeliner-inner{
-
-}
-#siteEduExperience .timeliner-inner .timeliner-box{
-  top: 50px;
+#siteWorkExperience .timeliner-inner .timeliner-box{
   width: 46%;
   color: #757575;
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 25px;
 }
-#siteEduExperience .timeliner-inner .timeliner-box-left{
+#siteWorkExperience .timeliner-inner .timeliner-box-left{
   float: left;
   clear: left;
 }
-#siteEduExperience .timeliner-inner .timeliner-box-right{
+#siteWorkExperience .timeliner-inner .timeliner-box-right{
   float: right;
   clear: right;
 }
-#siteEduExperience .timeliner-box-position1 {
+#siteWorkExperience .dot{
+  width: 8px;
+  height: 8px;
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #e8676b;
+}
+#siteWorkExperience .dot1{
+  top: 70px;
+  left: 466px;
+}
+#siteWorkExperience .dot2{
+  top: 70px;
+  left: -41px
+}
+#siteWorkExperience .timeliner-box-position1 {
   position: absolute;
   left: 0px;
   right: auto;
-  top: 0px;
+  top: 50px;
 }
-#siteEduExperience .timeline-box-inner{
+#siteWorkExperience .timeliner-box-position2 {
+  position: absolute;
+  right: 0px;
+  left: auto;
+  top: 100px;
+}
+#siteWorkExperience .timeliner-box-position3 {
+  position: absolute;
+  left: 0px;
+  right: auto;
+  top: 268px;
+}
+#siteWorkExperience .timeline-box-inner{
   border-width: 5px 0 0 0;
   border-style: solid;
   border-color: #e8676b;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
-#siteEduExperience .arrow{
+#siteWorkExperience .arrow-left{
   top: 53px;
   left: 433px;
   width: 12px;
@@ -811,24 +836,143 @@ section.siteMessageBoard > h2,
   background-repeat: no-repeat;
   background-position: -18px 0;
 }
-#siteEduExperience .timeline-head{
+#siteWorkExperience .arrow-right{
+  top: 53px;
+  left: -12px;
+  width: 12px;
+  height: 41px;
+  display: flex;
+  position: absolute;
+  background-image: url(/images/arrows.png);
+  background-repeat: no-repeat;
+}
+#siteWorkExperience .timeline-head{
   width: 100%;
   padding-top: 10px;
 }
-#siteEduExperience .timedate{
+#siteWorkExperience .timedate{
   color: #e8676b;
    font-weight: 700;
 }
-#siteEduExperience h5{
+#siteWorkExperience h5{
   padding-top: 5px;
 }
-#siteEduExperience p{
+#siteWorkExperience p{
   font-size: 16px;
   padding: 20px 10px;
   text-align: justify;
 }
 
+
 /*---------------section.siteContact---------------*/
+
+#siteContact{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#siteContact .contact{
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  height: 500px;
+}
+#siteContact .contact-box{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+#siteContact .contact-box:hover{
+  animation: breath 0.75s infinite alternate-reverse;
+}
+#siteContact .contact-list{
+  padding: 30px 20px;
+  display: block;
+  height: 300px;
+  width: 100%;
+  flex-direction: column;
+}
+#siteContact .contact-list li{
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+  color: rgb(61,68,81);
+  line-height: 20px;
+  padding: 10px 35px;
+}
+#siteContact .contact-list strong{
+  width: 95px;
+  display: flex;
+  font-size: 13px;
+}
+#siteContact .contact-list span{
+  width: 300px;
+  display: flex;
+  font-size: 16px;
+}
+#siteContact .more-contact{
+  display: flex;
+  flex-direction: column;
+}
+#siteContact .more-contact ul{
+  display: flex;
+  padding-top: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#siteContact .more-contact li{
+  display: flex;
+  height: 50px;
+}
+#siteContact .more-contact li:hover{
+  background-color: #e6686a;
+  transform: scale(1.1);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+#siteContact .more-contact li,
+#siteContact .more-contact a,
+#siteContact .more-contact img{
+  border-radius: 50%;
+}
+
+/*---------------section.siteMessageBoard---------------*/
+
+#siteOther .other-box{
+
+}
+#siteOther .other-box ul{
+
+}
+#siteOther .other-box li{
+  text-align: left;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#siteOther .other-box h3{
+  padding: 10px 30px;
+  background-color: #e8676b;
+  font-weight: 600;
+  font-size: 17px;
+  color: #FFFFFF;
+}
+#siteOther .other-box div{
+  display: none;
+  padding: 30px 30px;
+  text-align: justify;
+  vertical-align: middle;
+  color: rgb(61,68,81);
+  background-color: #FFFFFF;
+  line-height: 24px;
+}
+#siteOther .other-box li.active{
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+#siteOther .other-box li.active div{
+  display: block;
+}
+
+
 
 /*---------------section.siteMessageBoard---------------*/
 

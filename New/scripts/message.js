@@ -20,7 +20,7 @@
     }
   }
 
-  var view = document.querySelector('section.message')
+  var view = document.querySelector('#siteMessageBoard')
 
 
   var controller = {
